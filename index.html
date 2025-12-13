@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tung Tran – AI Engineer | Portfolio</title>
+    <meta name="description" content="Portfolio của Trần Thành Tùng – AI Engineer, GenAI, Computer Vision, Chatbot, Machine Learning Projects.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tranthanhtung.github.io/">
+    <meta property="og:title" content="Trần Thành Tùng – AI Engineer | Portfolio">
+    <meta property="og:description" content="AI Engineer Portfolio – GenAI, Chatbot, Computer Vision, Machine Learning.">
+    <meta property="og:image" content="https://tranthanhtung.github.io/preview.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trần Thành Tùng – AI Engineer">
+    <meta name="twitter:description" content="AI Engineer Portfolio – GenAI, Chatbot, Computer Vision.">
+    <meta name="twitter:image" content="https://tranthanhtung.github.io/preview.png">
+</head>
+
+
+<body>
+    <!-- =========================================
+    HEADER BLOCK
+    ========================================= -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__content">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    style="display: inline-block; font-size: 1.5rem; font-weight: bold; cursor: pointer;">
+                    <img src="public/images/logo.png" alt="Logo Tùng" style="height: 40px; display: block;">
+                </a>
+
+                <nav class="header__nav" id="main-nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link nav__link--active" data-lang-vi="Trang chủ"
+                                data-lang-en="Home">Trang chủ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link" data-lang-vi="Giới thiệu" data-lang-en="About">Giới
+                                thiệu</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link" data-lang-vi="Kỹ năng" data-lang-en="Skills">Kỹ năng</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link" data-lang-vi="Dự án" data-lang-en="Projects">Dự án</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên
+                                hệ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions">
+                    <button class="action-btn" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="action-btn__icon fas fa-moon"></i>
+                    </button>
+                    <button class="action-btn" id="language-toggle" aria-label="Toggle language">
+                        <span class="action-btn__icon language-text">EN</span>
+                    </button>
+                    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================
+    HERO BLOCK
+    ========================================= -->
+    <section id="home" class="hero section">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title fade-in">
+                    <span data-lang-vi="Xin chào, tôi là" data-lang-en="Hi, I'm">Xin chào, tôi là</span>
+                    <span data-lang-vi="Trần Thanh Tùng" data-lang-en="Tran Thanh Tung" class="text-gradient">Trần Thanh Tùng</span>
+                </h1>
+                <p class="hero__description fade-in"
+                    data-lang-vi="Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, đam mê phát triển Frontend và thiết kế giao diện người dùng. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng trong môi trường chuyên nghiệp."
+                    data-lang-en="I'm a final-year IT student passionate about Frontend development and UI design. I'm always looking for opportunities to learn and develop my skills in a professional environment.">
+                    Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, đam mê phát triển Frontend và thiết kế
+                    giao diện người dùng. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng trong môi trường
+                    chuyên nghiệp.
+                </p>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary"
+                        style="color: white; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-lang-vi="Liên hệ ngay" data-lang-en="Contact Now">Liên hệ ngay</span>
+                    </a>
+                    <a href="/public/Tran%20Thanh%20Tung%20CV.pdf?v=<%= Math.random().toString(36).substring(2) %>" 
+                        class="btn btn--secondary" 
+                        style="display: flex; align-items: center; gap: 8px;"
+                        target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span data-lang-vi="Tải CV" data-lang-en="Download CV">Tải CV</span>
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat__number">5+</span>
+                        <span class="hero-stat__label" data-lang-vi="Dự án đã làm" data-lang-en="Projects Done">Dự án đã làm</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat__number">100%</span>
+                        <span class="hero-stat__label" data-lang-vi="Hoàn thành deadline"
+                            data-lang-en="Deadline Completion">
+                            Hoàn thành deadline
+                        </span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat__number">100%</span>
+                        <span class="hero-stat__label" data-lang-vi="Sẵn sàng học hỏi" data-lang-en="Ready to Learn">Sẵn
+                            sàng học hỏi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__avatar-container">
+                    <img src="public/images/avt.jpg"
+                        alt="Trần Thanh Tùng" class="hero__avatar">
+                    <div class="hero__avatar-bg"></div>
+                </div>
+                <div class="hero__floating-elements">
+                    <div class="floating-element floating-element--1 glass">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                    </div>
+                    <div class="floating-element floating-element--2 glass">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                    </div>
+                    <div class="floating-element floating-element--3 glass">
+                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+    ABOUT BLOCK
+    ========================================= -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title fade-in" data-lang-vi="Giới Thiệu" data-lang-en="About Me">Giới Thiệu</h2>
+                <p class="section__subtitle fade-in"
+                    data-lang-vi="Tìm hiểu thêm về hành trình và đam mê của tôi trong lập trình"
+                    data-lang-en="Learn more about my journey and passion in programming">Tìm hiểu thêm về hành
+                    trình và đam mê của tôi trong lập trình</p>
+            </div>
+            <div class="about__container">
+                <div class="about__info">
+                    <div class="about__info-content glass fade-in">
+                        <div class="about__info-section">
+                            <h3 class="about__info-title">
+                                <i class="fal fa-graduation-cap"></i> 
+                                <span data-i18n="about.education" data-lang-vi="Học vấn" data-lang-en="Education">Học vấn</span>
+                            </h3>
+                            <div class="about__info-item">
+                                <div class="about__info-details">
+                                    <strong class="about__info-institution" 
+                                            data-i18n="about.university" 
+                                            data-lang-vi="Trường Đại học Tài Nguyên và Môi trường Hà Nội (HUNRE)"
+                                            data-lang-en="Hanoi University of Natural Resources and Environment (HUNRE)">
+                                        Trường Đại học Tài Nguyên và Môi trường Hà Nội (HUNRE)
+                                    </strong>
+                                    <p class="about__info-major">
+                                        <span data-i18n="about.major" data-lang-vi="Chuyên ngành:" data-lang-en="Major:">Chuyên ngành:</span> 
+                                        <span data-i18n="about.majorName" data-lang-vi="Công nghệ thông tin" data-lang-en="Information Technology">Công nghệ thông tin</span>
+                                    </p>
+                                    <p class="about__info-gpa">
+                                        GPA: 2.95/4.0 | 2022 - 
+                                        <span data-i18n="about.present" data-lang-vi="Nay" data-lang-en="Present">Nay</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about__info-section">
+                            <h3 class="about__info-title">
+                                <i class="fal fa-map-marker-alt"></i> 
+                                <span data-i18n="about.contact" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên hệ</span>
+                            </h3>
+                            <div class="about__info-item">
+                                <div class="about__info-details">
+                                    <p class="about__info-contact">
+                                        <strong data-i18n="about.phone" data-lang-vi="Điện thoại:" data-lang-en="Phone:">Điện thoại:</strong> 
+                                        0385&#8203; 183&#8203; 923&#8203;
+                                    </p>
+                                    <p class="about__info-contact">
+                                        <strong>Email:</strong> tthtung274@gmail.com
+                                    </p>
+                                    <p class="about__info-contact">
+                                        <strong data-i18n="about.address" data-lang-vi="Địa chỉ:" data-lang-en="Address:">Địa chỉ:</strong> 
+                                        <span data-i18n="about.addressDetail" data-lang-vi="P. Phú Diễn, TP. Hà Nội" data-lang-en="Phu Dien Ward, Hanoi City">P. Phú Diễn, TP. Hà Nội</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__content glass fade-in">
+                    <p class="about__text"
+                    data-lang-vi="Mục tiêu ngắn hạn: Là sinh viên năm cuối ngành Công nghệ Thông tin, tôi muốn tham gia dự án web thực tế để học hỏi kinh nghiệm. Qua đó rèn luyện kỹ năng HTML, CSS, JavaScript và hình thành tác phong làm việc chuyên nghiệp trong môi trường năng động."
+                    data-lang-en="Short-term Goal: As a final-year IT student, I aim to join real web projects to learn from experienced developers. This allows me to improve programming skills in HTML, CSS, JavaScript and develop a professional work ethic in a dynamic environment.">
+                    Mục tiêu ngắn hạn: Là sinh viên năm cuối ngành Công nghệ Thông tin, tôi muốn tham gia dự án web thực tế để học hỏi kinh nghiệm. Qua đó rèn luyện kỹ năng HTML, CSS, JavaScript và hình thành tác phong làm việc chuyên nghiệp trong môi trường năng động.</p>
+                    <p class="about__text"
+                    data-lang-vi="Mục tiêu dài hạn: Phấn đấu trở thành lập trình viên Web xuất sắc, có khả năng tự thiết kế, xây dựng và phát triển ứng dụng web hoàn chỉnh. Tôi mong muốn đóng góp vào sản phẩm công nghệ mang lại giá trị thực cho người dùng và tạo tác động tích cực đến doanh nghiệp."
+                    data-lang-en="Long-term Goal: To become an outstanding Web Developer able to independently design, build, and develop complete web applications. I aspire to contribute to tech products that provide practical value to users and positively impact businesses.">
+                    Mục tiêu dài hạn: Phấn đấu trở thành lập trình viên Web xuất sắc, có khả năng tự thiết kế, xây dựng và phát triển ứng dụng web hoàn chỉnh. Tôi mong muốn đóng góp vào sản phẩm công nghệ mang lại giá trị thực cho người dùng và tạo tác động tích cực đến doanh nghiệp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+    SKILLS BLOCK
+    ========================================= -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title fade-in" data-lang-vi="Kỹ Năng" data-lang-en="Skills">Kỹ Năng</h2>
+                <p class="section__subtitle fade-in"
+                    data-lang-vi="Các công nghệ và kỹ năng tôi đang học tập và phát triển"
+                    data-lang-en="Technologies and skills I'm learning and developing">Các công nghệ và kỹ năng tôi đang
+                    học tập và phát triển</p>
+            </div>
+            
+            <div class="skills__categories">
+                <div class="skills-category glass fade-in">
+                    <div class="skills-category__header">
+                        <div class="skills-category__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skills-category__title" data-lang-vi="Kỹ thuật" data-lang-en="Technical">Kỹ thuật
+                        </h3>
+                    </div>
+                    <div class="skills__grid">
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/Html.png" alt="HTML" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Css.png" alt="CSS" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Js.png" alt="JavaScript" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">Frontend</h4>
+                        </div>
+
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/Php.png" alt="PHP" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Java.png" alt="Java" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">Backend</h4>
+                        </div>
+                        
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/Katalon.png" alt="Katalon Studio" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Postman.png" alt="Postman" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">Testing</h4>
+                        </div>
+
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/Python.png" alt="Python" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">AI & Machine Learning</h4>
+                        </div>
+
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/C.png" alt="C" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Cpp.png" alt="C++" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">Embedded</h4>
+                        </div>
+
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <img src="public/images/Laravel.png" alt="Laravel" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/Spring_Boot.png" alt="Spring Boot" style="height: 36px; margin-right: 5px;">
+                                <img src="public/images/net.png" alt=".NET" style="height: 36px;">
+                            </div>
+                            <h4 class="skill-card__title">Framework</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category glass fade-in">
+                    <div class="skills-category__header">
+                        <div class="skills-category__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="skills-category__title" data-lang-vi="Chuyên môn" data-lang-en="Professional">Chuyên môn</h3>
+                    </div>
+                    <div class="skills__grid">
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Giao tiếp" data-lang-en="Communication">Giao tiếp</h4>
+                        </div>
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Làm việc nhóm" data-lang-en="Teamwork">Làm việc nhóm</h4>
+                        </div>
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Giải quyết vấn đề"
+                                data-lang-en="Problem Solving">Giải quyết vấn đề</h4>
+                        </div>
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Quản lý thời gian"
+                                data-lang-en="Time Management">Quản lý thời gian</h4>
+                        </div>
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Tự học" data-lang-en="Self-learning">Tự học</h4>
+                        </div>
+                        <div class="skill-card glass">
+                            <div class="skill-card__icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h4 class="skill-card__title" data-lang-vi="Tiếng Anh" data-lang-en="English">Tiếng Anh</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience__categories" style="margin: 3.2rem 0;">
+                <div class="experience-card glass skills-category fade-in">
+
+                    <div class="skills-category__header">
+                        <div class="skills-category__icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="skills-category__title" 
+                            data-lang-vi="Kinh nghiệm làm việc" 
+                            data-lang-en="Work Experience">
+                            Kinh nghiệm làm việc
+                        </h3>
+                    </div>
+
+                    <div class="experience-card__title" 
+                        data-lang-vi="Chuyên viên kinh doanh" 
+                        data-lang-en="Sales Executive">
+                        Chuyên viên kinh doanh
+                    </div>
+
+                    <div class="experience-card__subtitle" 
+                        data-lang-vi="Công ty Cổ phần Tập đoàn Faraland Việt Nam | 07/2024 - Nay"
+                        data-lang-en="Faraland Vietnam Corporation | 07/2024 - Present">
+                        Công ty Cổ phần Tập đoàn Faraland Việt Nam | 07/2024 - Nay
+                    </div>
+
+                    <ul class="experience-card__description">
+                        <li data-lang-vi="Rèn luyện tư duy logic về kỹ năng phân tích nhu cầu người dùng."
+                            data-lang-en="Strengthened logical thinking in analyzing user needs.">
+                            Rèn luyện tư duy logic về kỹ năng phân tích nhu cầu người dùng.
+                        </li>
+
+                        <li data-lang-vi="Phát triển kỹ năng quản lý dữ liệu và sắp xếp thông tin khoa học."
+                            data-lang-en="Improved data management and structured information organization skills.">
+                            Phát triển kỹ năng quản lý dữ liệu và sắp xếp thông tin khoa học.
+                        </li>
+
+                        <li data-lang-vi="Nâng cao kỹ năng giao tiếp, phối hợp nhóm khi làm việc với đội ngũ cộng sự."
+                            data-lang-en="Enhanced communication and teamwork when collaborating with colleagues.">
+                            Nâng cao kỹ năng giao tiếp, phối hợp nhóm khi làm việc với đội ngũ cộng sự.
+                        </li>
+
+                        <li data-lang-vi="Hình thành thói quen tối ưu quy trình làm việc, chú trọng trải nghiệm người dùng."
+                            data-lang-en="Developed a habit of optimizing workflows with a user-experience focus.">
+                            Hình thành thói quen tối ưu quy trình làm việc, chú trọng trải nghiệm người dùng.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="achievement__categories">
+                <div class="achievement-card glass skills-category fade-in">
+                    <div class="skills-category__header">
+                        <div class="skills-category__icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="skills-category__title" 
+                            data-lang-vi="Thành tựu" 
+                            data-lang-en="Achievements">
+                            Thành tựu
+                        </h3>
+                    </div>
+
+                    <ul class="achievement-card__description">
+                        <li data-lang-vi="Giải Xuất sắc Nghiên cứu khoa học cấp Khoa 2025"
+                            data-lang-en="Excellent Award – Faculty-level Scientific Research 2025">
+                            Giải Xuất sắc Nghiên cứu khoa học cấp Khoa 2025
+                        </li>
+
+                        <li data-lang-vi="Giải Ba Nghiên cứu khoa học cấp Trường 2025"
+                            data-lang-en="Third Prize – University-level Scientific Research 2025">
+                            Giải Ba Nghiên cứu khoa học cấp Trường 2025
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+    PROJECTS BLOCK
+    ========================================= -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title fade-in" data-lang-vi="Dự Án" data-lang-en="Projects">Dự Án</h2>
+                <p class="section__subtitle fade-in" data-lang-vi="Các dự án tôi đã thực hiện trong quá trình học tập"
+                    data-lang-en="Projects I've done during my studies">Các dự án tôi đã thực hiện trong quá trình học
+                    tập</p>
+            </div>
+            <div class="projects__grid">
+                <div class="project-card glass fade-in">
+                    <div class="project-card__image-container">
+                        <img src="public/images/pj1.png" 
+                            alt="Chonnha.com.vn" 
+                            class="project-card__image">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-lang-vi="Chonnha.com.vn" data-lang-en="Chonnha.com.vn">
+                            Chonnha.com.vn
+                        </h3>
+                        <p class="project-card__role-time" data-lang-vi="Vai trò Full-stack và trưởng nhóm phát triển (09/2024 - 08/2025)" data-lang-en="Full-stack developer and team lead (09/2024 - 08/2025)">
+                            Vai trò Full-stack và trưởng nhóm phát triển (09/2024 - 08/2025)
+                        </p>
+                        <p class="project-card__description" 
+                        data-lang-vi="Xây dựng nền tảng mua bán bất động sản với tính năng đặt lịch xem nhà và chatbot tư vấn thông minh."
+                        data-lang-en="Developed a real estate platform with property booking and intelligent consultation chatbot.">
+                            Xây dựng nền tảng mua bán bất động sản với tính năng đặt lịch xem nhà và chatbot tư vấn thông minh.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in">
+                    <div class="project-card__image-container">
+                        <img src="public/images/pj2.png" 
+                            alt="hMADE" 
+                            class="project-card__image">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-lang-vi="hMADE" data-lang-en="hMADE">
+                            hMADE
+                        </h3>
+                        <p class="project-card__role-time" data-lang-vi="Vai trò Full-stack và trưởng nhóm phát triển (08/2025 - 10/2025)" data-lang-en="Full-stack developer and team lead (08/2025 - 10/2025)">
+                            Vai trò Full-stack và trưởng nhóm phát triển (08/2025 - 10/2025)
+                        </p>
+                        <p class="project-card__description" 
+                        data-lang-vi="Website thương mại điện tử dành cho sản phẩm handmade. Tích hợp API thanh toán MoMo và dịch vụ Giao hàng Nhanh để tối ưu trải nghiệm người dùng."
+                        data-lang-en="E-commerce website for handmade products. Integrated MoMo payment API and Giao hàng Nhanh service to optimize user experience.">
+                            Website thương mại điện tử dành cho sản phẩm handmade. Tích hợp API thanh toán MoMo và dịch vụ Giao hàng Nhanh để tối ưu trải nghiệm người dùng.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass fade-in">
+                    <div class="project-card__image-container">
+                        <img src="public/images/pj3.png" 
+                            alt="Robot tự hành chăm sóc cây trồng" 
+                            class="project-card__image">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-lang-vi="Robot tự hành chăm sóc cây trồng" data-lang-en="Autonomous Plant Care Robot">
+                            Robot tự hành chăm sóc cây trồng
+                        </h3>
+                        <p class="project-card__role-time" data-lang-vi="Vai trò Lập trình viên IoT và trưởng nhóm phát triển (08/2025 - 10/2025)" data-lang-en="IoT developer and team lead (08/2025 - 10/2025)">
+                            Vai trò Lập trình viên IoT và trưởng nhóm phát triển (08/2025 - 10/2025)
+                        </p>
+                        <p class="project-card__description" 
+                        data-lang-vi="Xây dựng robot tự hành di chuyển theo đường định sẵn, kiểm tra tình trạng cây trồng và đánh giá lá, sâu bệnh, độ ẩm đất bằng Computer Vision."
+                        data-lang-en="Developed an autonomous robot that follows preset paths, monitors plant health, and evaluates leaves, pests, and soil moisture using Computer Vision.">
+                            Xây dựng robot tự hành di chuyển theo đường định sẵn, kiểm tra tình trạng cây trồng và đánh giá lá, sâu bệnh, độ ẩm đất bằng Computer Vision.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">ESP32-CAM</span>
+                            <span class="project-tag">C</span>
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+    CONTACT BLOCK
+    ========================================= -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title fade-in" data-lang-vi="Liên Hệ" data-lang-en="Contact">Liên Hệ</h2>
+                <p class="section__subtitle fade-in" data-lang-vi="Hãy kết nối với tôi để khám phá khả năng hợp tác"
+                    data-lang-en="Let’s connect to explore potential collaboration">Hãy kết nối với tôi để khám phá khả năng hợp tác</p>
+            </div>
+            <div class="contact__container">
+                <div class="contact__info glass fade-in">
+                    <h3 class="contact__info-title" data-lang-vi="Thông Tin Liên Hệ" data-lang-en="Contact Information">
+                        Thông Tin Liên Hệ</h3>
+                    <div class="contact__methods">
+                        <a href="tel:+84385183923" class="contact-method glass">
+                            <div class="contact-method__icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-method__text">
+                                <div class="contact-method__title" data-lang-vi="Điện thoại" data-lang-en="Phone">Điện
+                                    thoại</div>
+                                <div class="contact-method__description">+84 385&#8203; 183&#8203; 923&#8203;</div>
+                            </div>
+                        </a>
+
+                        <a href="https://mail.google.com/mail/?view=cm&to=tthtung274@gmail.com" 
+                            class="contact-method glass" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            <div class="contact-method__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method__text">
+                                <div class="contact-method__title" data-lang-vi="Email" data-lang-en="Email">Email</div>
+                                <div class="contact-method__description">tthtung274@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a href="https://facebook.com/tthtung274/" target="_blank" class="contact-method glass">
+                            <div class="contact-method__icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="contact-method__text">
+                                <div class="contact-method__title">Facebook</div>
+                                <div class="contact-method__description">Trần Thanh Tùng</div>
+                            </div>
+                        </a>
+
+                        <a href="https://zalo.me/0385183923" target="_blank" class="contact-method glass">
+                            <div class="contact-method__icon">
+                                <i class="fab fa-weixin"></i>
+                            </div>
+                            <div class="contact-method__text">
+                                <div class="contact-method__title">Zalo</div>
+                                <div class="contact-method__description">+84 385&#8203; 183&#8203; 923&#8203;</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+    FOOTER BLOCK
+    ========================================= -->
+    <footer class="footer section">
+        <div class="container">
+            <div class="footer__container glass">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        <img src="/public/images/logo.png" alt="Logo Tùng" style="height: 40px;">
+                    </div>
+                    <p class="footer__text" data-lang-vi="Frontend Intern & UI/UX Enthusiast"
+                        data-lang-en="Frontend Intern & UI/UX Enthusiast">Frontend Intern & UI/UX Enthusiast</p>
+                    <p class="footer__text" data-lang-vi="© 2023 Trần Thanh Tùng. Tất cả quyền được bảo lưu."
+                        data-lang-en="© 2023 Trần Thanh Tùng. All rights reserved.">© 2023 Trần Thanh Tùng. Tất cả quyền
+                        được bảo lưu.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================
+    BACK TO TOP BUTTON
+    ========================================= -->
+    <a href="#" class="back-to-top glass" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
