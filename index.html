@@ -1,616 +1,1143 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tran Thanh Tung | AI Engineer · Frontend Developer</title>
+    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
 
-    <title>Tung Tran – AI Engineer | Portfolio</title>
-    <meta name="description" content="Portfolio của Trần Thành Tùng – AI Engineer, GenAI, Computer Vision, Chatbot, Machine Learning Projects.">
+    <meta name="description"
+        content="Tran Thanh Tung Portfolio. AI Engineer and Frontend Developer. Artificial Intelligence, Web Development, Remote opportunities." />
+    <meta name="keywords"
+        content="Tran Thanh Tung AI Engineer Frontend Developer Portfolio AI Web Developer Vietnam" />
+    <meta name="author" content="Tran Thanh Tung" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tranthanhtung.page.gd/" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tranthanhtung.github.io/">
-    <meta property="og:title" content="Trần Thành Tùng – AI Engineer | Portfolio">
-    <meta property="og:description" content="AI Engineer Portfolio – GenAI, Chatbot, Computer Vision, Machine Learning.">
-    <meta property="og:image" content="https://tranthanhtung.github.io/preview.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tran Thanh Tung Portfolio" />
+    <meta property="og:url" content="https://tranthanhtung.page.gd/" />
+    <meta property="og:title" content="Tran Thanh Tung | AI Engineer · Frontend Developer" />
+    <meta property="og:description"
+        content="Portfolio showcasing AI systems and modern frontend web development projects." />
+    <meta property="og:image" content="https://tranthanhtung.page.gd/public/images/preview.png" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Trần Thành Tùng – AI Engineer">
-    <meta name="twitter:description" content="AI Engineer Portfolio – GenAI, Chatbot, Computer Vision.">
-    <meta name="twitter:image" content="https://tranthanhtung.github.io/preview.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tran Thanh Tung | AI Engineer · Frontend Developer" />
+    <meta name="twitter:description"
+        content="AI and Frontend Developer Portfolio. Building intelligent and user-friendly applications." />
+
+    <link rel="icon" href="/public/images/favicon-48.png" sizes="48x48" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="public/fontawesome-pro-5/css/all.css" />
+    <link rel="stylesheet" href="app.css" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZLLE17NCM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EZLLE17NCM');
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tran Thanh Tung",
+        "jobTitle": "AI Engineer & Frontend Developer",
+        "url": "https://tranthanhtung.page.gd",
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Computer Vision",
+            "Natural Language Processing",
+            "Frontend Development",
+            "Web Development",
+            "ReactJS",
+            "UI/UX"
+        ]
+        }
+    </script>
+
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 
-
 <body>
-    <!-- =========================================
-    HEADER BLOCK
-    ========================================= -->
-    <header class="header" id="header">
-        <div class="container header__container">
-            <div class="header__content">
-                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                    style="display: inline-block; font-size: 1.5rem; font-weight: bold; cursor: pointer;">
-                    <img src="public/images/logo.png" alt="Logo Tùng" style="height: 40px; display: block;">
-                </a>
 
-                <nav class="header__nav" id="main-nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link nav__link--active" data-lang-vi="Trang chủ"
-                                data-lang-en="Home">Trang chủ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link" data-lang-vi="Giới thiệu" data-lang-en="About">Giới
-                                thiệu</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link" data-lang-vi="Kỹ năng" data-lang-en="Skills">Kỹ năng</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#projects" class="nav__link" data-lang-vi="Dự án" data-lang-en="Projects">Dự án</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên
-                                hệ</a>
-                        </li>
-                    </ul>
-                </nav>
+    <!-- =================== CURSOR =================== -->
+    <div class="cursor-dot" id="cursorDot"></div>
 
-                <div class="header__actions">
-                    <button class="action-btn" id="theme-toggle" aria-label="Toggle theme">
-                        <i class="action-btn__icon fas fa-moon"></i>
-                    </button>
-                    <button class="action-btn" id="language-toggle" aria-label="Toggle language">
-                        <span class="action-btn__icon language-text">EN</span>
-                    </button>
-                    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+    <!-- =================== NAVBAR =================== -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="#home" class="navbar__logo" aria-label="Home">
+                <img src="public/images/mascot-pirates1.png" alt="Logo Tùng" class="navbar__logo-img" loading="lazy" />
+                <span class="navbar__logo-text">Tung's Portfolio</span>
+            </a>
+
+            <nav class="navbar__nav" id="mainNav" aria-label="Main navigation">
+                <ul class="navbar__list">
+                    <li><a href="#home" class="navbar__link" data-lang-vi="Trang chủ" data-lang-en="Home">Trang chủ</a>
+                    </li>
+                    <li><a href="#about" class="navbar__link" data-lang-vi="Giới thiệu" data-lang-en="About">Giới
+                            thiệu</a></li>
+                    <li><a href="#journey" class="navbar__link" data-lang-vi="Hành trình" data-lang-en="Journey">Hành
+                            trình</a></li>
+                    <li><a href="#skills" class="navbar__link" data-lang-vi="Kỹ năng" data-lang-en="Skills">Kỹ năng</a>
+                    </li>
+                    <li><a href="#projects" class="navbar__link" data-lang-vi="Dự án" data-lang-en="Projects">Dự án</a>
+                    </li>
+                    <li><a href="#contact" class="navbar__link" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên
+                            hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar__actions">
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fal fa-moon"></i>
+                </button>
+                <button class="icon-btn" id="langToggle" aria-label="Toggle language">
+                    <span class="lang-label">EN</span>
+                </button>
+                <button class="icon-btn hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- =========================================
-    HERO BLOCK
-    ========================================= -->
-    <section id="home" class="hero section">
-        <div class="container hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title fade-in">
-                    <span data-lang-vi="Xin chào, tôi là" data-lang-en="Hi, I'm">Xin chào, tôi là</span>
-                    <span data-lang-vi="Trần Thanh Tùng" data-lang-en="Tran Thanh Tung" class="text-gradient">Trần Thanh Tùng</span>
+    <!-- =================== HERO =================== -->
+    <section id="home" class="hero" aria-labelledby="heroTitle">
+        <div class="hero__bg-grid"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__inner">
+            <div class="hero__text">
+                <p class="hero__eyebrow reveal-up" data-lang-vi="Xin chào! tôi là" data-lang-en="Hello! I'm">Xin chào!
+                    tôi là</p>
+                <h1 id="heroTitle" class="hero__name reveal-up">
+                    <span data-lang-vi="Trần" data-lang-en="Tran">Trần</span><br />
+                    <span class="hero__name--accent"
+                        data-lang-vi="Thanh Tùng"
+                        data-lang-en="Thanh Tung">
+                        Thanh Tùng
+                    </span>
                 </h1>
-                <p class="hero__description fade-in"
-                    data-lang-vi="Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, đam mê phát triển Frontend và thiết kế giao diện người dùng. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng trong môi trường chuyên nghiệp."
-                    data-lang-en="I'm a final-year IT student passionate about Frontend development and UI design. I'm always looking for opportunities to learn and develop my skills in a professional environment.">
-                    Tôi là sinh viên năm cuối chuyên ngành Công nghệ Thông tin, đam mê phát triển Frontend và thiết kế
-                    giao diện người dùng. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng trong môi trường
-                    chuyên nghiệp.
+                <p class="hero__role reveal-up">
+                    <span class="role-static" data-lang-vi="Chuyên về " data-lang-en="Specializing in ">Chuyên về
+                    </span>
+                    <span class="role-typed" id="roleTyped"></span><span class="blink-cursor">|</span>
                 </p>
-                <div class="hero__actions">
-                    <a href="#contact" class="btn btn--primary"
-                        style="color: white; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-paper-plane"></i>
-                        <span data-lang-vi="Liên hệ ngay" data-lang-en="Contact Now">Liên hệ ngay</span>
-                    </a>
-                    <a href="/public/Tran%20Thanh%20Tung%20CV.pdf?v=<%= Math.random().toString(36).substring(2) %>" 
-                        class="btn btn--secondary" 
-                        style="display: flex; align-items: center; gap: 8px;"
-                        target="_blank">
-                        <i class="fas fa-download"></i>
-                        <span data-lang-vi="Tải CV" data-lang-en="Download CV">Tải CV</span>
-                    </a>
-                </div>
-                <div class="hero__stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat__number">5+</span>
-                        <span class="hero-stat__label" data-lang-vi="Dự án đã làm" data-lang-en="Projects Done">Dự án đã làm</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat__number">100%</span>
-                        <span class="hero-stat__label" data-lang-vi="Hoàn thành deadline"
-                            data-lang-en="Deadline Completion">
-                            Hoàn thành deadline
+                <p class="hero__desc reveal-up"
+                    data-lang-vi="Đam mê xây dựng sản phẩm số hiện đại, kết hợp trí tuệ nhân tạo và giao diện người dùng để biến ý tưởng thành trải nghiệm thực tế."
+                    data-lang-en="Passionate about building modern digital products, combining artificial intelligence and user interfaces to turn ideas into real experiences.">
+                    Đam mê xây dựng sản phẩm số hiện đại, kết hợp trí tuệ nhân tạo và giao diện người dùng để biến ý
+                    tưởng thành trải nghiệm thực tế.
+                </p>
+                <div class="hero__buttons reveal-up">
+                    <a href="#contact" class="hero-btn primary">
+                        <span class="hero-btn__text" data-lang-vi="Liên hệ ngay" data-lang-en="Contact Me">
+                            Liên hệ ngay
                         </span>
+                        <span class="hero-btn__icon">
+                            <i class="fal fa-paper-plane"></i>
+                        </span>
+                    </a>
+                    <a href="public/TranThanhTung_Resume.pdf" download class="hero-btn outline">
+                        <span class="hero-btn__text" data-lang-vi="Tải CV" data-lang-en="Download CV">
+                            Tải CV
+                        </span>
+                        <span class="hero-btn__icon">
+                            <i class="fal fa-download"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="hero__stats reveal-up">
+                    <div class="stat-item">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label" data-lang-vi="Dự án" data-lang-en="Projects">Dự án</span>
                     </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat__number">100%</span>
-                        <span class="hero-stat__label" data-lang-vi="Sẵn sàng học hỏi" data-lang-en="Ready to Learn">Sẵn
-                            sàng học hỏi</span>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">3.05</span>
+                        <span class="stat-label">GPA / 4.0</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">2</span>
+                        <span class="stat-label" data-lang-vi="Giải thưởng" data-lang-en="Awards">Giải thưởng</span>
                     </div>
                 </div>
             </div>
-            <div class="hero__image">
-                <div class="hero__avatar-container">
-                    <img src="public/images/avt.jpg"
-                        alt="Trần Thanh Tùng" class="hero__avatar">
-                    <div class="hero__avatar-bg"></div>
+            <div class="hero__visual reveal-right">
+                <div class="hero__mascot-wrap">
+                    <img src="public/images/mascot-welcom.png" alt="Tran Thanh Tung AI Engineer mascot"
+                        class="hero__mascot" loading="eager" />
+
+                    <div class="hero__badge hero__badge--1">
+                        <i class="fal fa-code"></i>
+                        <span>Frontend</span>
+                    </div>
+                    <div class="hero__badge hero__badge--2">
+                        <i class="fal fa-brain"></i>
+                        <span>AI</span>
+                    </div>
+                    <div class="hero__badge hero__badge--3">
+                        <i class="fal fa-layer-group"></i>
+                        <span>UI/UX</span>
+                    </div>
                 </div>
-                <div class="hero__floating-elements">
-                    <div class="floating-element floating-element--1 glass">
-                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="Scroll down">
+            <span class="scroll-hint__mouse"><span class="scroll-hint__wheel"></span></span>
+        </a>
+        <div class="hero__big-bg-text" aria-hidden="true">TRAN THANH TUNG</div>
+    </section>
+
+    <!-- =================== ABOUT =================== -->
+    <section id="about" class="section about" aria-labelledby="aboutTitle">
+        <div class="container">
+            <div class="section-label reveal-up" data-lang-vi="01 - Giới Thiệu" data-lang-en="01 - About">01 - Giới
+                Thiệu</div>
+            <h2 id="aboutTitle" class="section-title reveal-up" data-lang-vi="Tôi là ai?" data-lang-en="Who am I?">
+                Tôi là ai?</h2>
+            <!-- Education -->
+            <div class="about-block about-block--edu reveal-split">
+                <div class="about-block__text">
+                    <span class="tag-chip" data-lang-vi="Học vấn" data-lang-en="Education">Học vấn</span>
+                    <h3 data-lang-vi="Trường Đại học Tài Nguyên và Môi trường Hà Nội"
+                        data-lang-en="Hanoi University of Natural Resources end Environment">
+                        Trường Đại học Tài Nguyên và Môi trường Hà Nội
+                    </h3>
+                    <p data-lang-vi="Chuyên ngành Công nghệ Thông tin (2022 - 2026)"
+                        data-lang-en="Major: Information Technology (2022 - 2026)">
+                        Chuyên ngành Công nghệ Thông tin (2022 - 2026)
+                    </p>
+                    <div class="gpa-bar">
+                        <span class="gpa-label">GPA</span>
+                        <div class="gpa-track">
+                            <div class="gpa-fill" data-width="76.25"></div>
+                        </div>
+                        <span class="gpa-value">3.05 / 4.0</span>
                     </div>
-                    <div class="floating-element floating-element--2 glass">
-                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                </div>
+                <div class="about-block__visual">
+                    <img src="public/images/mascot-hat2.png" alt="AI Engineer student mascot" loading="lazy" />
+                </div>
+            </div>
+            <!-- Goals -->
+            <div class="about-block about-block--goals reveal-split reveal-split--reverse">
+                <div class="about-block__visual about-block__visual--goals">
+                    <div class="goals-card">
+                        <div class="goals-card__icon"><i class="fal fa-code"></i></div>
+                        <p class="goals-card__label" data-lang-vi="Ngắn hạn" data-lang-en="Short-term">Ngắn hạn</p>
+                        <p class="goals-card__text"
+                            data-lang-vi="Tham gia dự án thực tế với vai trò Frontend Developer, đồng thời tích hợp các tính năng AI để nâng cao trải nghiệm người dùng"
+                            data-lang-en="Join real-world projects as a Frontend Developer while integrating AI features to enhance user experience">
+                            Tham gia dự án thực tế với vai trò Frontend Developer, đồng thời tích hợp các tính năng AI
+                            để nâng cao trải nghiệm người dùng
+                        </p>
                     </div>
-                    <div class="floating-element floating-element--3 glass">
-                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                    <div class="goals-card goals-card--alt">
+                        <div class="goals-card__icon"><i class="fal fa-rocket"></i></div>
+                        <p class="goals-card__label" data-lang-vi="Dài hạn" data-lang-en="Long-term">Dài hạn</p>
+                        <p class="goals-card__text"
+                            data-lang-vi="Trở thành Frontend Developer có nền tảng AI, xây dựng sản phẩm thông minh với giao diện hiện đại và hiệu năng cao"
+                            data-lang-en="Become a Frontend Developer with AI expertise, building intelligent products with modern UI and high performance">
+                            Trở thành Frontend Developer có nền tảng AI, xây dựng sản phẩm thông minh với giao diện hiện
+                            đại và hiệu năng cao
+                        </p>
+                    </div>
+                </div>
+                <div class="about-block__text">
+                    <span class="tag-chip" data-lang-vi="Mục tiêu" data-lang-en="Goals">Mục tiêu</span>
+                    <h3 data-lang-vi="Định hướng nghề nghiệp" data-lang-en="Career Direction">
+                        Định hướng nghề nghiệp
+                    </h3>
+                    <p data-lang-vi="Là sinh viên năm cuối CNTT, tôi định hướng phát triển theo Frontend, đồng thời học và ứng dụng AI để xây dựng các sản phẩm có trải nghiệm người dùng tốt và tính năng thông minh."
+                        data-lang-en="As a final-year IT student, I focus on Frontend while learning and applying AI to build user-friendly and intelligent products.">
+                        Là sinh viên năm cuối CNTT, tôi định hướng phát triển theo Frontend, đồng thời học và ứng dụng
+                        AI để xây dựng các sản phẩm có trải nghiệm người dùng tốt và tính năng thông minh.
+                    </p>
+                </div>
+            </div>
+            <!-- Hobbies -->
+            <div class="hobbies-block reveal-up">
+                <span class="tag-chip" data-lang-vi="Sở thích" data-lang-en="Hobbies">Sở thích</span>
+                <div class="hobby-row hobby-row--img-right">
+                    <div class="hobby-row__text">
+                        <span class="hobby-row__num">01</span>
+                        <h3 data-lang-vi="Bóng đá" data-lang-en="Football">Bóng đá</h3>
+                        <p data-lang-vi="Đam mê với trái bóng từ nhỏ - sân cỏ dạy tôi tinh thần đồng đội, chiến thuật và không bao giờ bỏ cuộc."
+                            data-lang-en="Passionate about football since childhood - the pitch taught me teamwork, strategy and never giving up.">
+                            Đam mê với trái bóng từ nhỏ - sân cỏ dạy tôi tinh thần đồng đội, chiến thuật và không bao
+                            giờ bỏ cuộc.
+                        </p>
+                    </div>
+                    <div class="hobby-row__img">
+                        <img src="public/images/mascot-football.png" alt="Football hobby mascot" loading="lazy" />
+                    </div>
+                </div>
+                <div class="hobby-row hobby-row--img-left">
+                    <div class="hobby-row__img">
+                        <img src="public/images/mascot-photo.png" alt="Photography hobby mascot" loading="lazy" />
+                    </div>
+                    <div class="hobby-row__text">
+                        <span class="hobby-row__num">02</span>
+                        <h3 data-lang-vi="Nhiếp ảnh" data-lang-en="Photography">Nhiếp ảnh</h3>
+                        <p data-lang-vi="Nhìn thế giới qua ống kính - nhiếp ảnh giúp tôi chú ý đến chi tiết và tìm vẻ đẹp trong những điều bình thường."
+                            data-lang-en="Seeing the world through a lens - photography helps me notice details and find beauty in ordinary things.">
+                            Nhìn thế giới qua ống kính - nhiếp ảnh giúp tôi chú ý đến chi tiết và tìm vẻ đẹp trong những
+                            điều bình thường.
+                        </p>
+                    </div>
+                </div>
+                <div class="hobby-row hobby-row--img-right">
+                    <div class="hobby-row__text">
+                        <span class="hobby-row__num">03</span>
+                        <h3 data-lang-vi="Nghiên cứu khoa học" data-lang-en="Scientific Research">Nghiên cứu khoa học
+                        </h3>
+                        <p data-lang-vi="Giải quyết bài toán thực tế bằng phương pháp khoa học - mỗi nghiên cứu là một hành trình khám phá điều mới."
+                            data-lang-en="Solving real-world problems with scientific methods - every research project is a journey of discovery.">
+                            Giải quyết bài toán thực tế bằng phương pháp khoa học - mỗi nghiên cứu là một hành trình
+                            khám phá điều mới.
+                        </p>
+                    </div>
+                    <div class="hobby-row__img">
+                        <img src="public/images/mascot-lab.png" alt="Research hobby mascot" loading="lazy" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =========================================
-    ABOUT BLOCK
-    ========================================= -->
-    <section id="about" class="about section">
+    <!-- =================== JOURNEY =================== -->
+    <section id="journey" class="section journey" aria-labelledby="journeyTitle">
+        <div class="journey__bg-accent"></div>
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title fade-in" data-lang-vi="Giới Thiệu" data-lang-en="About Me">Giới Thiệu</h2>
-                <p class="section__subtitle fade-in"
-                    data-lang-vi="Tìm hiểu thêm về hành trình và đam mê của tôi trong lập trình"
-                    data-lang-en="Learn more about my journey and passion in programming">Tìm hiểu thêm về hành
-                    trình và đam mê của tôi trong lập trình</p>
+            <div class="section-label reveal-up" data-lang-vi="02 - Hành Trình" data-lang-en="02 - Journey">02 - Hành
+                Trình</div>
+            <h2 id="journeyTitle" class="section-title reveal-up" data-lang-vi="Con đường đến kho báu"
+                data-lang-en="The Road to Treasure">Con đường đến kho báu</h2>
+            <p class="section-sub reveal-up"
+                data-lang-vi="Mỗi bước trên hành trình là một phần của câu chuyện chưa kết thúc."
+                data-lang-en="Every step of this journey is part of an unfinished story.">
+                Mỗi bước trên hành trình là một phần của câu chuyện chưa kết thúc.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline__line"></div>
+
+                <div class="timeline__item reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">01</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Khởi hành"
+                            data-lang-en="The Beginning">Khởi hành</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Quyết định theo đuổi lập trình từ sự hứng thú và mong muốn phát triển bản thân"
+                                data-lang-en="Decided to pursue programming out of curiosity and self-development goals">
+                                Quyết định theo đuổi lập trình từ sự hứng thú và mong muốn phát triển bản thân
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-flag"></i></div>
+                    <div class="timeline__mascot">
+                        <img src="public/images/mascot-pirates1.png" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--right reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">02</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Nền móng số"
+                            data-lang-en="Digital Foundation">Nền móng số</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Những dòng code đầu tiên với HTML, CSS và JavaScript"
+                                data-lang-en="First lines of code with HTML, CSS and JavaScript">
+                                Những dòng code đầu tiên với HTML, CSS và JavaScript
+                            </li>
+                            <li data-lang-vi="Hiểu cách một website được hình thành"
+                                data-lang-en="Understanding how a website is built">
+                                Hiểu cách một website được hình thành
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-code"></i></div>
+                </div>
+
+                <div class="timeline__item reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">03</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Dấu ấn đầu"
+                            data-lang-en="First Milestone">Dấu ấn đầu</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Xây dựng website bất động sản chonnha.com.vn"
+                                data-lang-en="Built real estate website chonnha.com.vn">
+                                Xây dựng website bất động sản chonnha.com.vn
+                            </li>
+                            <li data-lang-vi="Tạo chatbot AI đầu tiên cho sản phẩm"
+                                data-lang-en="Created the first AI chatbot for the product">
+                                Tạo chatbot AI đầu tiên cho sản phẩm
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-star"></i></div>
+                </div>
+
+                <div class="timeline__item timeline__item--right reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">04</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Ghi nhận đầu tiên"
+                            data-lang-en="First Achievements">Ghi nhận đầu tiên</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Giải xuất sắc NCKH cấp khoa"
+                                data-lang-en="Excellent Research Award at Faculty Level">
+                                Giải xuất sắc NCKH cấp khoa
+                            </li>
+                            <li data-lang-vi="Giải ba NCKH cấp trường 2025"
+                                data-lang-en="Third Prize Research Award at University Level 2025">
+                                Giải ba NCKH cấp trường 2025
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-trophy"></i></div>
+                    <div class="timeline__mascot">
+                        <img src="public/images/mascot-pirates2.png" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="timeline__item reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">05</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Lửa nghề"
+                            data-lang-en="Passion Ignited">Lửa nghề</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Niềm đam mê với lập trình trở nên mạnh mẽ hơn"
+                                data-lang-en="Stronger passion for programming">
+                                Niềm đam mê với lập trình trở nên mạnh mẽ hơn
+                            </li>
+                            <li data-lang-vi="Bắt đầu đào sâu AI một cách nghiêm túc"
+                                data-lang-en="Started diving deeper into AI seriously">
+                                Bắt đầu đào sâu AI một cách nghiêm túc
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-fire"></i></div>
+                </div>
+
+                <div class="timeline__item timeline__item--right reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">06</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Robot tự hành"
+                            data-lang-en="Autonomous Robot">Robot tự hành</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Thiết kế robot tự hành chăm sóc cây trồng"
+                                data-lang-en="Designed an autonomous plant care robot">
+                                Thiết kế robot tự hành chăm sóc cây trồng
+                            </li>
+                            <li data-lang-vi="Tích hợp AI nhận diện hình ảnh lá cây"
+                                data-lang-en="Integrated AI for leaf image recognition">
+                                Tích hợp AI nhận diện hình ảnh lá cây
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-robot"></i></div>
+                </div>
+
+                <div class="timeline__item reveal-timeline">
+                    <div class="timeline__card">
+                        <span class="timeline__num">07</span>
+                        <h3 class="timeline__title"
+                            data-lang-vi="AI kết nối vạn vật"
+                            data-lang-en="AI Meets IoT">AI kết nối vạn vật</h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Hệ thống AI quản lý phòng ủ rượu với IoT"
+                                data-lang-en="AI system for wine cellar management with IoT">
+                                Hệ thống AI quản lý phòng ủ rượu với IoT
+                            </li>
+                            <li data-lang-vi="Ứng dụng AI và dữ liệu cảm biến để dự báo hoàn tất quá trình ủ"
+                                data-lang-en="Used AI and sensor data to predict fermentation completion">
+                                Ứng dụng AI và dữ liệu cảm biến để dự báo hoàn tất quá trình ủ
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot"><i class="fal fa-microchip"></i></div>
+                    <div class="timeline__mascot">
+                        <img src="public/images/mascot-pirates3.png" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--right reveal-timeline">
+                    <div class="timeline__card timeline__card--final">
+                        <span class="timeline__num">08</span>
+                        <div class="timeline__date">11/2025 - 02/2026</div>
+                        <h3 class="timeline__title"
+                            data-lang-vi="Intern - Sointech Group JSC"
+                            data-lang-en="Intern - Sointech Group JSC">
+                            Intern - Sointech Group JSC
+                        </h3>
+                        <ul class="timeline__list">
+                            <li data-lang-vi="Học ReactJS và NodeJS trong dự án thực tế"
+                                data-lang-en="Learned ReactJS and NodeJS in real projects">
+                                Học ReactJS và NodeJS trong dự án thực tế
+                            </li>
+                            <li data-lang-vi="Làm quen quy trình phát triển web chuyên nghiệp"
+                                data-lang-en="Got familiar with professional web development workflow">
+                                Làm quen quy trình phát triển web chuyên nghiệp
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline__dot timeline__dot--final"><i class="fal fa-gem"></i></div>
+                </div>
             </div>
-            <div class="about__container">
-                <div class="about__info">
-                    <div class="about__info-content glass fade-in">
-                        <div class="about__info-section">
-                            <h3 class="about__info-title">
-                                <i class="fal fa-graduation-cap"></i> 
-                                <span data-i18n="about.education" data-lang-vi="Học vấn" data-lang-en="Education">Học vấn</span>
-                            </h3>
-                            <div class="about__info-item">
-                                <div class="about__info-details">
-                                    <strong class="about__info-institution" 
-                                            data-i18n="about.university" 
-                                            data-lang-vi="Trường Đại học Tài Nguyên và Môi trường Hà Nội (HUNRE)"
-                                            data-lang-en="Hanoi University of Natural Resources and Environment (HUNRE)">
-                                        Trường Đại học Tài Nguyên và Môi trường Hà Nội (HUNRE)
-                                    </strong>
-                                    <p class="about__info-major">
-                                        <span data-i18n="about.major" data-lang-vi="Chuyên ngành:" data-lang-en="Major:">Chuyên ngành:</span> 
-                                        <span data-i18n="about.majorName" data-lang-vi="Công nghệ thông tin" data-lang-en="Information Technology">Công nghệ thông tin</span>
-                                    </p>
-                                    <p class="about__info-gpa">
-                                        GPA: 2.95/4.0 | 2022 - 
-                                        <span data-i18n="about.present" data-lang-vi="Nay" data-lang-en="Present">Nay</span>
+        </div>
+    </section>
+
+    <!-- =================== SKILLS =================== -->
+    <section id="skills" class="section skills" aria-labelledby="skillsTitle">
+        <div class="container">
+            <div class="section-label reveal-up" data-lang-vi="03 - Kỹ Năng" data-lang-en="03 - Skills">03 - Kỹ Năng
+            </div>
+            <h2 id="skillsTitle" class="section-title reveal-up" data-lang-vi="Bộ công cụ của tôi"
+                data-lang-en="My Toolkit">Bộ công cụ của tôi</h2>
+
+            <div class="skills-grid">
+                <!-- AI / ML -->
+                <div class="skill-category reveal-up">
+                    <div class="skill-category__header">
+                        <span class="skill-category__icon"><i class="fal fa-brain"></i></span>
+                        <h3 data-lang-vi="Trí tuệ nhân tạo" data-lang-en="Artificial Intelligence">Trí tuệ nhân tạo</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>Python</span><span>60%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>Machine Learning</span><span>65%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>Computer Vision</span><span>70%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>NLP / PhoBERT</span><span>70%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web -->
+                <div class="skill-category reveal-up" style="--delay: 0.1s">
+                    <div class="skill-category__header">
+                        <span class="skill-category__icon"><i class="fal fa-globe"></i></span>
+                        <h3 data-lang-vi="Phát triển Web" data-lang-en="Web Development">Phát triển Web</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>HTML / CSS / JS</span><span>65%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>ReactJS</span><span>60%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>NodeJS</span><span>60%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>PHP / Laravel</span><span>65%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embedded -->
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="skill-category__header">
+                        <span class="skill-category__icon"><i class="fal fa-microchip"></i></span>
+                        <h3 data-lang-vi="Nhúng & IoT" data-lang-en="Embedded & IoT">Nhúng &amp; IoT</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>Arduino / C/C++</span><span>75%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar__info"><span>ESP32 / ESP8266</span><span>75%</span></div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category reveal-up" style="--delay: 0.3s">
+                    <div class="skill-category__header">
+                        <span class="skill-category__icon"><i class="fal fa-users"></i></span>
+                        <h3 data-lang-vi="Kỹ năng mềm" data-lang-en="Soft Skills">Kỹ năng mềm</h3>
+                    </div>
+                    <div class="soft-tags">
+                        <span class="soft-tag" data-lang-vi="Giao tiếp" data-lang-en="Communication">Giao tiếp</span>
+                        <span class="soft-tag" data-lang-vi="Làm việc nhóm" data-lang-en="Teamwork">Làm việc nhóm</span>
+                        <span class="soft-tag" data-lang-vi="Tự học" data-lang-en="Self Learning">Tự học</span>
+                        <span class="soft-tag" data-lang-vi="Giải quyết vấn đề" data-lang-en="Problem Solving">Giải
+                            quyết vấn đề</span>
+                        <span class="soft-tag" data-lang-vi="Quản lý thời gian" data-lang-en="Time Management">Quản lý
+                            thời gian</span>
+                        <span class="soft-tag" data-lang-vi="Lãnh đạo nhóm" data-lang-en="Team Leadership">Lãnh đạo
+                            nhóm</span>
+                        <span class="soft-tag" data-lang-vi="Tiếng Anh" data-lang-en="English">Tiếng Anh</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tools badges -->
+            <div class="tools-row reveal-up">
+                <span class="tag-chip" data-lang-vi="Công cụ và Công nghệ" data-lang-en="Tools and Technology">Công cụ
+                    và Công nghệ</span>
+                <div class="tool-badges">
+                    <span class="tool-badge">Git</span>
+                    <span class="tool-badge">VS Code</span>
+                    <span class="tool-badge">IntelliJ IDEA</span>
+                    <span class="tool-badge">Postman</span>
+                    <span class="tool-badge">Katalon</span>
+                    <span class="tool-badge">MySQL</span>
+                    <span class="tool-badge">PostgreSQL</span>
+                    <span class="tool-badge">RESTful API</span>
+                    <span class="tool-badge">Flask API</span>
+                    <span class="tool-badge">A-Frame</span>
+                    <span class="tool-badge">ResNet-18</span>
+                    <span class="tool-badge">PhoBERT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== PROJECTS =================== -->
+    <section id="projects" class="section projects" aria-labelledby="projectsTitle">
+        <div class="container">
+            <div class="section-label reveal-up" data-lang-vi="04 - Dự Án" data-lang-en="04 - Projects">04 - Dự Án</div>
+            <h2 id="projectsTitle" class="section-title reveal-up" data-lang-vi="Những gì tôi đã xây dựng"
+                data-lang-en="What I've Built">Những gì tôi đã xây dựng</h2>
+
+            <!-- PROJECT 01 -->
+            <article class="project-card reveal-up" aria-labelledby="pj1Title">
+                <div class="project-card__inner">
+                    <div class="project-card__media">
+                        <div class="project-card__img-pair">
+                            <img src="public/images/pj1.1.png" alt="Chonnha real estate website" loading="lazy" />
+                            <img src="public/images/pj1.3.png" alt="Chonnha AI chatbot" loading="lazy" />
+                        </div>
+                        <!-- 360 VR Zone -->
+                        <div class="xp-zone">
+                            <div class="xp-zone__label">
+                                <span data-lang-vi="KHU TRẢI NGHIỆM" data-lang-en="EXPERIENCE ZONE">KHU TRẢI
+                                    NGHIỆM</span>
+                                <small data-lang-vi="Xem nhà 360 độ" data-lang-en="View home in 360°">Xem nhà 360
+                                    độ</small>
+                            </div>
+                            <div class="vr-wrap">
+                                <a-scene embedded vr-mode-ui="enabled: false"
+                                    device-orientation-permission-ui="enabled: false">
+                                    <a-assets>
+                                        <img id="vrImg" src="/public/images/anhVR.jpg" alt="360 degree virtual tour" />
+                                    </a-assets>
+                                    <a-sky src="#vrImg" rotation="0 -90 0"></a-sky>
+                                </a-scene>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card__content">
+                        <span class="project-num">01</span>
+                        <h3 id="pj1Title" class="project-name">Chonnha.com.vn</h3>
+                        <div class="project-meta">
+                            <span class="project-role">
+                                <i class="fal fa-user-tie"></i>
+                                <span
+                                    data-lang-vi="Full Stack Developer · AI Engineer · Trưởng nhóm"
+                                    data-lang-en="Full Stack Developer · AI Engineer · Team Leader">
+                                    Full Stack Developer · AI Engineer · Trưởng nhóm
+                                </span>
+                            </span>
+                            <span class="project-date"><i class="fal fa-calendar"></i> 09/2024 - 08/2025</span>
+                        </div>
+                        <p class="project-desc">
+                            <span data-lang-vi="- Tìm kiếm bất động sản theo nhu cầu và bộ lọc chi tiết"
+                                data-lang-en="- Search properties based on needs with detailed filters"></span><br>
+                            <span data-lang-vi="- Đặt lịch xem nhà trực tiếp nhanh chóng, thuận tiện"
+                                data-lang-en="- Schedule house viewings quickly and conveniently"></span><br>
+                            <span data-lang-vi="- Xem vị trí trên bản đồ kết hợp trải nghiệm nhà 360°"
+                                data-lang-en="- View locations on map combined with 360° virtual tours"></span><br>
+                            <span data-lang-vi="- Chatbot AI PhoBERT hỗ trợ tư vấn và giải đáp tự động"
+                                data-lang-en="- AI chatbot using PhoBERT for automated consultation and support"></span>
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span><span>PhoBERT</span><span>HTML/CSS/JS</span><span>PHP</span><span>A-Frame</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 02 -->
+            <article class="project-card project-card--reverse reveal-up" aria-labelledby="pj2Title">
+                <div class="project-card__inner">
+                    <div class="project-card__media">
+                        <div class="project-card__hero-img">
+                            <img src="public/images/pj2.1.png" alt="hMADE handmade e-commerce" loading="lazy" />
+                        </div>
+                        <!-- Customization Zone -->
+                        <div class="xp-zone">
+                            <div class="xp-zone__label">
+                                <span data-lang-vi="KHU TRẢI NGHIỆM" data-lang-en="EXPERIENCE ZONE">KHU TRẢI
+                                    NGHIỆM</span>
+                                <small data-lang-vi="Tự thiết kế thủ công" data-lang-en="Handmade design">Tự thiết kế
+                                    thủ công</small>
+                            </div>
+                            <div class="customizer">
+                                <div class="customizer__products">
+                                    <img src="public/images/custom-ao.png" alt="T-shirt" loading="lazy"
+                                        class="cust-product" />
+                                    <img src="public/images/custom-coc.png" alt="Mug" loading="lazy"
+                                        class="cust-product" />
+                                    <img src="public/images/custom-tui.png" alt="Bag" loading="lazy"
+                                        class="cust-product" />
+                                </div>
+                                <div class="customizer__canvas-wrap" id="custCanvas">
+                                    <img id="custBase" class="cust-base" alt="Selected product" />
+                                </div>
+                                <div class="customizer__controls">
+                                    <div class="cust-stickers">
+                                        <img src="public/images/sticker1.png" alt="Sticker 1" loading="lazy" />
+                                        <img src="public/images/sticker2.png" alt="Sticker 2" loading="lazy" />
+                                        <img src="public/images/sticker3.png" alt="Sticker 3" loading="lazy" />
+                                    </div>
+                                    <label><span data-lang-vi="Xoay sticker" data-lang-en="Rotate sticker">Xoay
+                                            sticker</span>
+                                        <input type="range" id="stickerRotate" min="0" max="360" value="0" /></label>
+                                    <label><span data-lang-vi="Kích thước" data-lang-en="Size">Kích thước</span>
+                                        <input type="range" id="stickerScale" min="50" max="200" value="100" /></label>
+                                    <div class="cust-text-row">
+                                        <input type="text" id="textInput" placeholder="Nội dung chữ..."
+                                            data-placeholder-vi="Nội dung chữ..." data-placeholder-en="Enter text..."
+                                            aria-label="Text content" />
+                                        <button id="addText" data-lang-vi="Thêm" data-lang-en="Add">Thêm</button>
+                                    </div>
+                                    <label><span data-lang-vi="Màu chữ" data-lang-en="Text color">Màu chữ</span>
+                                        <input type="color" id="textColor" value="#000000"
+                                            aria-label="Text color" /></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card__content">
+                        <span class="project-num">02</span>
+                        <h3 id="pj2Title" class="project-name">hMADE</h3>
+                        <div class="project-meta">
+                            <span class="project-role">
+                                <i class="fal fa-user-tie"></i>
+                                <span
+                                    data-lang-vi="Full Stack Developer · AI Engineer · Trưởng nhóm"
+                                    data-lang-en="Full Stack Developer · AI Engineer · Team Leader">
+                                    Full Stack Developer · AI Engineer · Trưởng nhóm
+                                </span>
+                            </span>
+                            <span class="project-date"><i class="fal fa-calendar"></i> 09/2024 - 08/2025</span>
+                        </div>
+
+                        <p class="project-desc">
+                            <span data-lang-vi="- Website thương mại điện tử sản phẩm thủ công với hệ thống tùy chỉnh sản phẩm theo yêu cầu"
+                                data-lang-en="- E-commerce website for handmade products with product customization system"></span><br>
+                            <span data-lang-vi="- Tích hợp API thanh toán và quản lý giao hàng tự động"
+                                data-lang-en="- Integrated payment APIs and automated delivery management"></span><br>
+                            <span data-lang-vi="- Chatbot AI PhoBERT hỗ trợ tư vấn và chăm sóc khách hàng"
+                                data-lang-en="- AI chatbot using PhoBERT for consultation and customer support"></span><br>
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span><span>PhoBERT</span><span>Laravel</span><span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 03 -->
+            <article class="project-card reveal-up" aria-labelledby="pj3Title">
+                <div class="project-card__inner">
+                    <div class="project-card__media">
+                        <div class="project-card__hero-img">
+                            <img src="public/images/pj3.png" alt="AI plant care robot" loading="lazy" />
+                        </div>
+                        <!-- Leaf Analysis Zone -->
+                        <div class="xp-zone">
+                            <div class="xp-zone__label">
+                                <span data-lang-vi="KHU TRẢI NGHIỆM" data-lang-en="EXPERIENCE ZONE">KHU TRẢI
+                                    NGHIỆM</span>
+                                <small data-lang-vi="Phân tích lá cây bằng AI" data-lang-en="AI leaf analysis">Phân tích
+                                    lá cây bằng AI</small>
+                            </div>
+                            <div class="leaf-zone">
+                                <div class="leaf-grid">
+                                    <button class="leaf-btn-new"
+                                        data-desc-vi="Lá xanh tốt phát triển bình thường, không có dấu hiệu bất thường."
+                                        data-desc-en="Healthy green leaf growing normally with no abnormal signs.">
+                                        <img src="public/images/lacay1.png" alt="Healthy leaf" loading="lazy" />
+                                        <span data-lang-vi="Lá khỏe mạnh" data-lang-en="Healthy Leaf">Lá khỏe
+                                            mạnh</span>
+                                    </button>
+
+                                    <button class="leaf-btn-new"
+                                        data-desc-vi="Lá úa vàng do thiếu dinh dưỡng hoặc điều kiện đất không phù hợp."
+                                        data-desc-en="Yellowing leaf caused by nutrient deficiency or unsuitable soil.">
+                                        <img src="public/images/lacay2.png" alt="Yellowing leaf" loading="lazy" />
+                                        <span data-lang-vi="Lá úa vàng" data-lang-en="Yellow Leaf">Lá úa vàng</span>
+                                    </button>
+
+                                    <button class="leaf-btn-new"
+                                        data-desc-vi="Lá xuất hiện dấu hiệu sâu bệnh, cần can thiệp sớm để tránh lây lan."
+                                        data-desc-en="Leaf shows pest or disease signs, early intervention needed.">
+                                        <img src="public/images/lacay3.png" alt="Diseased leaf" loading="lazy" />
+                                        <span data-lang-vi="Sâu bệnh" data-lang-en="Diseased">Sâu bệnh</span>
+                                    </button>
+
+                                    <button class="leaf-btn-new"
+                                        data-desc-vi="Lá bị cháy do nắng gắt hoặc dư lượng phân bón trong đất."
+                                        data-desc-en="Leaf burn caused by intense sunlight or excess fertilizer.">
+                                        <img src="public/images/lacay4.png" alt="Burned leaf" loading="lazy" />
+                                        <span data-lang-vi="Lá cháy" data-lang-en="Burned">Lá cháy</span>
+                                    </button>
+                                </div>
+
+                                <div class="leaf-result-new" id="leafResult">
+                                    <i class="fal fa-seedling"></i>
+                                    <p data-lang-vi="Chọn một lá để xem phân tích AI"
+                                        data-lang-en="Select a leaf to view AI analysis">
+                                        Chọn một lá để xem phân tích AI
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="about__info-section">
-                            <h3 class="about__info-title">
-                                <i class="fal fa-map-marker-alt"></i> 
-                                <span data-i18n="about.contact" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên hệ</span>
-                            </h3>
-                            <div class="about__info-item">
-                                <div class="about__info-details">
-                                    <p class="about__info-contact">
-                                        <strong data-i18n="about.phone" data-lang-vi="Điện thoại:" data-lang-en="Phone:">Điện thoại:</strong> 
-                                        0385&#8203; 183&#8203; 923&#8203;
-                                    </p>
-                                    <p class="about__info-contact">
-                                        <strong>Email:</strong> tthtung274@gmail.com
-                                    </p>
-                                    <p class="about__info-contact">
-                                        <strong data-i18n="about.address" data-lang-vi="Địa chỉ:" data-lang-en="Address:">Địa chỉ:</strong> 
-                                        <span data-i18n="about.addressDetail" data-lang-vi="P. Phú Diễn, TP. Hà Nội" data-lang-en="Phu Dien Ward, Hanoi City">P. Phú Diễn, TP. Hà Nội</span>
-                                    </p>
+                    </div>
+
+                    <div class="project-card__content">
+                        <span class="project-num">03</span>
+                        <h3 id="pj3Title" class="project-name"
+                            data-lang-vi="Robot AI chăm sóc cây trồng"
+                            data-lang-en="AI Plant Care Robot">
+                            Robot AI chăm sóc cây trồng
+                        </h3>
+
+                        <div class="project-meta">
+                            <span class="project-role">
+                                <i class="fal fa-user-tie"></i>
+                                <span
+                                    data-lang-vi="AI Engineer · IoT Engineer · Trưởng nhóm"
+                                    data-lang-en="AI Engineer · IoT Engineer · Team Leader">
+                                    AI Engineer · IoT Engineer · Trưởng nhóm
+                                </span>
+                            </span>
+                            <span class="project-date"><i class="fal fa-calendar"></i> 08/2025 - 10/2025</span>
+                        </div>
+
+                        <p class="project-desc">
+                            <span data-lang-vi="- Robot tự hành đi theo line, tránh vật cản"
+                                data-lang-en="- Autonomous robot following line and obstacle avoidance"></span><br>
+                            <span data-lang-vi="- Đo độ ẩm đất và tự động tưới nước"
+                                data-lang-en="- Measure soil moisture and automate irrigation"></span><br>
+                            <span data-lang-vi="- Chụp ảnh lá cây bằng ESP32-CAM"
+                                data-lang-en="- Capture leaf images using ESP32-CAM"></span><br>
+                            <span data-lang-vi="- Phân tích bệnh lá bằng AI ResNet18"
+                                data-lang-en="- Analyze leaf diseases using AI ResNet18"></span><br>
+                            <span data-lang-vi="- Đưa ra giải pháp chăm sóc và cảnh báo sớm"
+                                data-lang-en="- Provide plant care solutions and early warnings"></span>
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span><span>C/C++</span><span>ESP32 CAM</span><span>Arduino</span><span>ResNet18</span><span>Flask API</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 04 -->
+            <article class="project-card project-card--reverse reveal-up" aria-labelledby="pj4Title">
+                <div class="project-card__inner">
+                    <div class="project-card__media">
+                        <div class="project-card__img-pair">
+                            <img src="public/images/pj4.1.png" alt="Wine cellar AI dashboard" loading="lazy" />
+                            <img src="public/images/pj4.2.png" alt="Wine cellar sensors" loading="lazy" />
+                        </div>
+                        <!-- Fermentation Zone -->
+                        <div class="xp-zone">
+                            <div class="xp-zone__label">
+                                <span data-lang-vi="KHU TRẢI NGHIỆM" data-lang-en="EXPERIENCE ZONE">KHU TRẢI
+                                    NGHIỆM</span>
+                                <small data-lang-vi="Dự đoán thời gian lên men bằng AI"
+                                    data-lang-en="AI fermentation prediction">Dự đoán thời gian lên men bằng AI</small>
+                            </div>
+                            <div class="ferm-zone">
+                                <div class="ferm-chart-area">
+                                    <svg viewBox="0 0 640 280" class="ferm-svg" aria-label="Temperature chart">
+                                        <g id="fGridLines"></g>
+                                        <g id="fYAxis"></g>
+                                        <g id="fXAxis"></g>
+                                        <polyline id="fDataLine" fill="none" stroke-width="3"></polyline>
+                                        <g id="fDataDots"></g>
+                                    </svg>
+                                </div>
+                                <div class="ferm-controls">
+                                    <p class="ferm-label" data-lang-vi="Nhiệt độ hôm nay (°C)"
+                                        data-lang-en="Today's temperature (°C)">Nhiệt độ hôm nay (°C)</p>
+                                    <input type="number" id="todayTemp" placeholder="22" min="0" max="50"
+                                        aria-label="Today temperature" />
+                                    <button class="ferm-btn" onclick="applyTemperature()">
+                                        <span data-lang-vi="Cập nhật dự đoán" data-lang-en="Update prediction">Cập nhật
+                                            dự đoán</span>
+                                    </button>
+                                    <div class="ferm-result" id="zone4FinishText"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="project-card__content">
+                        <span class="project-num">04</span>
+                        <h3 id="pj4Title" class="project-name"
+                            data-lang-vi="Hệ thống AI quản lý phòng ủ rượu"
+                            data-lang-en="AI Wine Cellar Management">
+                            Hệ thống AI quản lý phòng ủ rượu
+                        </h3>
+
+                        <div class="project-meta">
+                            <span class="project-role">
+                                <i class="fal fa-user-tie"></i>
+                                <span
+                                    data-lang-vi="Full Stack Developer · AI Engineer · IoT Engineer"
+                                    data-lang-en="Full Stack Developer · AI Engineer · IoT Engineer">
+                                    Full Stack Developer · AI Engineer · IoT Engineer
+                                </span>
+                            </span>
+                            <span class="project-date"><i class="fal fa-calendar"></i> 10/2025 - 03/2026</span>
+                        </div>
+
+                        <p class="project-desc">
+                            <span data-lang-vi="- Thu thập dữ liệu môi trường phòng ủ theo thời gian thực"
+                                data-lang-en="- Collect real-time environmental data from wine cellar"></span><br>
+                            <span data-lang-vi="- Tự động điều khiển quạt và đèn chiếu sáng theo điều kiện"
+                                data-lang-en="- Automatically control fans and lighting based on conditions"></span><br>
+                            <span data-lang-vi="- Thiết bị đo thùng ủ trả về nhiệt độ, độ ẩm và CO2"
+                                data-lang-en="- Barrel sensors return temperature, humidity and CO2 data"></span><br>
+                            <span data-lang-vi="- Hệ thống AI phân tích dữ liệu và dự đoán quá trình ủ"
+                                data-lang-en="- AI system analyzes data and predicts fermentation process"></span>
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span><span>ESP8266</span><span>ReactJS</span><span>NodeJS</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about__content glass fade-in">
-                    <p class="about__text"
-                    data-lang-vi="Mục tiêu ngắn hạn: Là sinh viên năm cuối ngành Công nghệ Thông tin, tôi muốn tham gia dự án web thực tế để học hỏi kinh nghiệm. Qua đó rèn luyện kỹ năng HTML, CSS, JavaScript và hình thành tác phong làm việc chuyên nghiệp trong môi trường năng động."
-                    data-lang-en="Short-term Goal: As a final-year IT student, I aim to join real web projects to learn from experienced developers. This allows me to improve programming skills in HTML, CSS, JavaScript and develop a professional work ethic in a dynamic environment.">
-                    Mục tiêu ngắn hạn: Là sinh viên năm cuối ngành Công nghệ Thông tin, tôi muốn tham gia dự án web thực tế để học hỏi kinh nghiệm. Qua đó rèn luyện kỹ năng HTML, CSS, JavaScript và hình thành tác phong làm việc chuyên nghiệp trong môi trường năng động.</p>
-                    <p class="about__text"
-                    data-lang-vi="Mục tiêu dài hạn: Phấn đấu trở thành lập trình viên Web xuất sắc, có khả năng tự thiết kế, xây dựng và phát triển ứng dụng web hoàn chỉnh. Tôi mong muốn đóng góp vào sản phẩm công nghệ mang lại giá trị thực cho người dùng và tạo tác động tích cực đến doanh nghiệp."
-                    data-lang-en="Long-term Goal: To become an outstanding Web Developer able to independently design, build, and develop complete web applications. I aspire to contribute to tech products that provide practical value to users and positively impact businesses.">
-                    Mục tiêu dài hạn: Phấn đấu trở thành lập trình viên Web xuất sắc, có khả năng tự thiết kế, xây dựng và phát triển ứng dụng web hoàn chỉnh. Tôi mong muốn đóng góp vào sản phẩm công nghệ mang lại giá trị thực cho người dùng và tạo tác động tích cực đến doanh nghiệp.</p>
-                </div>
-            </div>
+            </article>
+
         </div>
     </section>
 
-    <!-- =========================================
-    SKILLS BLOCK
-    ========================================= -->
-    <section id="skills" class="skills section">
+    <!-- =================== CONTACT =================== -->
+    <section id="contact" class="section contact" aria-labelledby="contactTitle">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title fade-in" data-lang-vi="Kỹ Năng" data-lang-en="Skills">Kỹ Năng</h2>
-                <p class="section__subtitle fade-in"
-                    data-lang-vi="Các công nghệ và kỹ năng tôi đang học tập và phát triển"
-                    data-lang-en="Technologies and skills I'm learning and developing">Các công nghệ và kỹ năng tôi đang
-                    học tập và phát triển</p>
-            </div>
-            
-            <div class="skills__categories">
-                <div class="skills-category glass fade-in">
-                    <div class="skills-category__header">
-                        <div class="skills-category__icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="skills-category__title" data-lang-vi="Kỹ thuật" data-lang-en="Technical">Kỹ thuật
-                        </h3>
+            <div class="contact__inner">
+                <div class="contact__left reveal-up">
+                    <div class="section-label" data-lang-vi="05 - Liên Hệ" data-lang-en="05 - Contact">05 - Liên Hệ
                     </div>
-                    <div class="skills__grid">
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/Html.png" alt="HTML" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Css.png" alt="CSS" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Js.png" alt="JavaScript" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">Frontend</h4>
-                        </div>
-
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/Php.png" alt="PHP" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Java.png" alt="Java" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">Backend</h4>
-                        </div>
-                        
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/Katalon.png" alt="Katalon Studio" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Postman.png" alt="Postman" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">Testing</h4>
-                        </div>
-
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/Python.png" alt="Python" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">AI & Machine Learning</h4>
-                        </div>
-
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/C.png" alt="C" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Cpp.png" alt="C++" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">Embedded</h4>
-                        </div>
-
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <img src="public/images/Laravel.png" alt="Laravel" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/Spring_Boot.png" alt="Spring Boot" style="height: 36px; margin-right: 5px;">
-                                <img src="public/images/net.png" alt=".NET" style="height: 36px;">
-                            </div>
-                            <h4 class="skill-card__title">Framework</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category glass fade-in">
-                    <div class="skills-category__header">
-                        <div class="skills-category__icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="skills-category__title" data-lang-vi="Chuyên môn" data-lang-en="Professional">Chuyên môn</h3>
-                    </div>
-                    <div class="skills__grid">
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Giao tiếp" data-lang-en="Communication">Giao tiếp</h4>
-                        </div>
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Làm việc nhóm" data-lang-en="Teamwork">Làm việc nhóm</h4>
-                        </div>
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Giải quyết vấn đề"
-                                data-lang-en="Problem Solving">Giải quyết vấn đề</h4>
-                        </div>
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Quản lý thời gian"
-                                data-lang-en="Time Management">Quản lý thời gian</h4>
-                        </div>
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Tự học" data-lang-en="Self-learning">Tự học</h4>
-                        </div>
-                        <div class="skill-card glass">
-                            <div class="skill-card__icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <h4 class="skill-card__title" data-lang-vi="Tiếng Anh" data-lang-en="English">Tiếng Anh</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experience__categories" style="margin: 3.2rem 0;">
-                <div class="experience-card glass skills-category fade-in">
-
-                    <div class="skills-category__header">
-                        <div class="skills-category__icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3 class="skills-category__title" 
-                            data-lang-vi="Kinh nghiệm làm việc" 
-                            data-lang-en="Work Experience">
-                            Kinh nghiệm làm việc
-                        </h3>
-                    </div>
-
-                    <div class="experience-card__title" 
-                        data-lang-vi="Chuyên viên kinh doanh" 
-                        data-lang-en="Sales Executive">
-                        Chuyên viên kinh doanh
-                    </div>
-
-                    <div class="experience-card__subtitle" 
-                        data-lang-vi="Công ty Cổ phần Tập đoàn Faraland Việt Nam | 07/2024 - Nay"
-                        data-lang-en="Faraland Vietnam Corporation | 07/2024 - Present">
-                        Công ty Cổ phần Tập đoàn Faraland Việt Nam | 07/2024 - Nay
-                    </div>
-
-                    <ul class="experience-card__description">
-                        <li data-lang-vi="Rèn luyện tư duy logic về kỹ năng phân tích nhu cầu người dùng."
-                            data-lang-en="Strengthened logical thinking in analyzing user needs.">
-                            Rèn luyện tư duy logic về kỹ năng phân tích nhu cầu người dùng.
-                        </li>
-
-                        <li data-lang-vi="Phát triển kỹ năng quản lý dữ liệu và sắp xếp thông tin khoa học."
-                            data-lang-en="Improved data management and structured information organization skills.">
-                            Phát triển kỹ năng quản lý dữ liệu và sắp xếp thông tin khoa học.
-                        </li>
-
-                        <li data-lang-vi="Nâng cao kỹ năng giao tiếp, phối hợp nhóm khi làm việc với đội ngũ cộng sự."
-                            data-lang-en="Enhanced communication and teamwork when collaborating with colleagues.">
-                            Nâng cao kỹ năng giao tiếp, phối hợp nhóm khi làm việc với đội ngũ cộng sự.
-                        </li>
-
-                        <li data-lang-vi="Hình thành thói quen tối ưu quy trình làm việc, chú trọng trải nghiệm người dùng."
-                            data-lang-en="Developed a habit of optimizing workflows with a user-experience focus.">
-                            Hình thành thói quen tối ưu quy trình làm việc, chú trọng trải nghiệm người dùng.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="achievement__categories">
-                <div class="achievement-card glass skills-category fade-in">
-                    <div class="skills-category__header">
-                        <div class="skills-category__icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3 class="skills-category__title" 
-                            data-lang-vi="Thành tựu" 
-                            data-lang-en="Achievements">
-                            Thành tựu
-                        </h3>
-                    </div>
-
-                    <ul class="achievement-card__description">
-                        <li data-lang-vi="Giải Xuất sắc Nghiên cứu khoa học cấp Khoa 2025"
-                            data-lang-en="Excellent Award – Faculty-level Scientific Research 2025">
-                            Giải Xuất sắc Nghiên cứu khoa học cấp Khoa 2025
-                        </li>
-
-                        <li data-lang-vi="Giải Ba Nghiên cứu khoa học cấp Trường 2025"
-                            data-lang-en="Third Prize – University-level Scientific Research 2025">
-                            Giải Ba Nghiên cứu khoa học cấp Trường 2025
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================
-    PROJECTS BLOCK
-    ========================================= -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title fade-in" data-lang-vi="Dự Án" data-lang-en="Projects">Dự Án</h2>
-                <p class="section__subtitle fade-in" data-lang-vi="Các dự án tôi đã thực hiện trong quá trình học tập"
-                    data-lang-en="Projects I've done during my studies">Các dự án tôi đã thực hiện trong quá trình học
-                    tập</p>
-            </div>
-            <div class="projects__grid">
-                <div class="project-card glass fade-in">
-                    <div class="project-card__image-container">
-                        <img src="public/images/pj1.png" 
-                            alt="Chonnha.com.vn" 
-                            class="project-card__image">
-                    </div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-lang-vi="Chonnha.com.vn" data-lang-en="Chonnha.com.vn">
-                            Chonnha.com.vn
-                        </h3>
-                        <p class="project-card__role-time" data-lang-vi="Vai trò Full-stack và trưởng nhóm phát triển (09/2024 - 08/2025)" data-lang-en="Full-stack developer and team lead (09/2024 - 08/2025)">
-                            Vai trò Full-stack và trưởng nhóm phát triển (09/2024 - 08/2025)
-                        </p>
-                        <p class="project-card__description" 
-                        data-lang-vi="Xây dựng nền tảng mua bán bất động sản với tính năng đặt lịch xem nhà và chatbot tư vấn thông minh."
-                        data-lang-en="Developed a real estate platform with property booking and intelligent consultation chatbot.">
-                            Xây dựng nền tảng mua bán bất động sản với tính năng đặt lịch xem nhà và chatbot tư vấn thông minh.
-                        </p>
-                        <div class="project-card__tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">PHP</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass fade-in">
-                    <div class="project-card__image-container">
-                        <img src="public/images/pj2.png" 
-                            alt="hMADE" 
-                            class="project-card__image">
-                    </div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-lang-vi="hMADE" data-lang-en="hMADE">
-                            hMADE
-                        </h3>
-                        <p class="project-card__role-time" data-lang-vi="Vai trò Full-stack và trưởng nhóm phát triển (08/2025 - 10/2025)" data-lang-en="Full-stack developer and team lead (08/2025 - 10/2025)">
-                            Vai trò Full-stack và trưởng nhóm phát triển (08/2025 - 10/2025)
-                        </p>
-                        <p class="project-card__description" 
-                        data-lang-vi="Website thương mại điện tử dành cho sản phẩm handmade. Tích hợp API thanh toán MoMo và dịch vụ Giao hàng Nhanh để tối ưu trải nghiệm người dùng."
-                        data-lang-en="E-commerce website for handmade products. Integrated MoMo payment API and Giao hàng Nhanh service to optimize user experience.">
-                            Website thương mại điện tử dành cho sản phẩm handmade. Tích hợp API thanh toán MoMo và dịch vụ Giao hàng Nhanh để tối ưu trải nghiệm người dùng.
-                        </p>
-                        <div class="project-card__tags">
-                            <span class="project-tag">Laravel</span>
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass fade-in">
-                    <div class="project-card__image-container">
-                        <img src="public/images/pj3.png" 
-                            alt="Robot tự hành chăm sóc cây trồng" 
-                            class="project-card__image">
-                    </div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-lang-vi="Robot tự hành chăm sóc cây trồng" data-lang-en="Autonomous Plant Care Robot">
-                            Robot tự hành chăm sóc cây trồng
-                        </h3>
-                        <p class="project-card__role-time" data-lang-vi="Vai trò Lập trình viên IoT và trưởng nhóm phát triển (08/2025 - 10/2025)" data-lang-en="IoT developer and team lead (08/2025 - 10/2025)">
-                            Vai trò Lập trình viên IoT và trưởng nhóm phát triển (08/2025 - 10/2025)
-                        </p>
-                        <p class="project-card__description" 
-                        data-lang-vi="Xây dựng robot tự hành di chuyển theo đường định sẵn, kiểm tra tình trạng cây trồng và đánh giá lá, sâu bệnh, độ ẩm đất bằng Computer Vision."
-                        data-lang-en="Developed an autonomous robot that follows preset paths, monitors plant health, and evaluates leaves, pests, and soil moisture using Computer Vision.">
-                            Xây dựng robot tự hành di chuyển theo đường định sẵn, kiểm tra tình trạng cây trồng và đánh giá lá, sâu bệnh, độ ẩm đất bằng Computer Vision.
-                        </p>
-                        <div class="project-card__tags">
-                            <span class="project-tag">Arduino</span>
-                            <span class="project-tag">ESP32-CAM</span>
-                            <span class="project-tag">C</span>
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================
-    CONTACT BLOCK
-    ========================================= -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title fade-in" data-lang-vi="Liên Hệ" data-lang-en="Contact">Liên Hệ</h2>
-                <p class="section__subtitle fade-in" data-lang-vi="Hãy kết nối với tôi để khám phá khả năng hợp tác"
-                    data-lang-en="Let’s connect to explore potential collaboration">Hãy kết nối với tôi để khám phá khả năng hợp tác</p>
-            </div>
-            <div class="contact__container">
-                <div class="contact__info glass fade-in">
-                    <h3 class="contact__info-title" data-lang-vi="Thông Tin Liên Hệ" data-lang-en="Contact Information">
-                        Thông Tin Liên Hệ</h3>
-                    <div class="contact__methods">
-                        <a href="tel:+84385183923" class="contact-method glass">
-                            <div class="contact-method__icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-method__text">
-                                <div class="contact-method__title" data-lang-vi="Điện thoại" data-lang-en="Phone">Điện
-                                    thoại</div>
-                                <div class="contact-method__description">+84 385&#8203; 183&#8203; 923&#8203;</div>
+                    <h2 id="contactTitle" class="section-title" data-lang-vi="Hãy cùng tạo ra điều gì đó!"
+                        data-lang-en="Let's build something together!">Hãy cùng tạo ra điều gì đó!</h2>
+                    <p class="contact__desc"
+                        data-lang-vi="Tôi đang tìm kiếm cơ hội thực tập/làm việc trong lĩnh vực AI. Nếu bạn có dự án thú vị hoặc muốn hợp tác, hãy liên hệ ngay!"
+                        data-lang-en="I'm looking for internship/work opportunities in AI. If you have an interesting project or want to collaborate, reach out!">
+                        Tôi đang tìm kiếm cơ hội thực tập/làm việc trong lĩnh vực AI. Nếu bạn có dự án thú vị hoặc muốn
+                        hợp tác, hãy liên hệ ngay!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="tel:+84385183923" class="contact-item">
+                            <span class="contact-item__icon"><i class="fal fa-phone"></i></span>
+                            <div>
+                                <p class="contact-item__label" data-lang-vi="Điện thoại" data-lang-en="Phone">Điện thoại
+                                </p>
+                                <p class="contact-item__val">+84 385 183 923</p>
                             </div>
                         </a>
-
-                        <a href="https://mail.google.com/mail/?view=cm&to=tthtung274@gmail.com" 
-                            class="contact-method glass" 
-                            target="_blank" 
+                        <a href="mailto:tthtung274@gmail.com" class="contact-item" target="_blank"
                             rel="noopener noreferrer">
-                            <div class="contact-method__icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-method__text">
-                                <div class="contact-method__title" data-lang-vi="Email" data-lang-en="Email">Email</div>
-                                <div class="contact-method__description">tthtung274@gmail.com</div>
+                            <span class="contact-item__icon"><i class="fal fa-envelope"></i></span>
+                            <div>
+                                <p class="contact-item__label">Email</p>
+                                <p class="contact-item__val">tthtung274@gmail.com</p>
                             </div>
                         </a>
-
-                        <a href="https://facebook.com/tthtung274/" target="_blank" class="contact-method glass">
-                            <div class="contact-method__icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <div class="contact-method__text">
-                                <div class="contact-method__title">Facebook</div>
-                                <div class="contact-method__description">Trần Thanh Tùng</div>
+                        <a href="https://facebook.com/tthtung274/" class="contact-item" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="contact-item__icon"><i class="fab fa-facebook-f"></i></span>
+                            <div>
+                                <p class="contact-item__label">Facebook</p>
+                                <p class="contact-item__val">Trần Thanh Tùng</p>
                             </div>
                         </a>
-
-                        <a href="https://zalo.me/0385183923" target="_blank" class="contact-method glass">
-                            <div class="contact-method__icon">
-                                <i class="fab fa-weixin"></i>
-                            </div>
-                            <div class="contact-method__text">
-                                <div class="contact-method__title">Zalo</div>
-                                <div class="contact-method__description">+84 385&#8203; 183&#8203; 923&#8203;</div>
+                        <a href="https://zalo.me/0385183923" class="contact-item" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="contact-item__icon"><i class="fal fa-comment-dots"></i></span>
+                            <div>
+                                <p class="contact-item__label">Zalo</p>
+                                <p class="contact-item__val">+84 385 183 923</p>
                             </div>
                         </a>
                     </div>
+                    <a href="public/TranThanhTung_Resume.pdf" download class="hero-btn primary"
+                        style="margin-top:2rem;">
+                        <span class="hero-btn__text" data-lang-vi="Tải CV của tôi" data-lang-en="Download My CV">
+                            Tải CV của tôi
+                        </span>
+                        <span class="hero-btn__icon">
+                            <i class="fal fa-download"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="contact__mascot reveal-right">
+                    <img src="public/images/mascot-meme.png" alt="Friendly mascot inviting contact" loading="lazy" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =========================================
-    FOOTER BLOCK
-    ========================================= -->
-    <footer class="footer section">
+    <!-- =================== FEEDBACK =================== -->
+    <section id="feedback" class="section feedback-section" aria-labelledby="feedbackTitle">
         <div class="container">
-            <div class="footer__container glass">
-                <div class="footer__content">
-                    <div class="footer__logo">
-                        <img src="/public/images/logo.png" alt="Logo Tùng" style="height: 40px;">
-                    </div>
-                    <p class="footer__text" data-lang-vi="Frontend Intern & UI/UX Enthusiast"
-                        data-lang-en="Frontend Intern & UI/UX Enthusiast">Frontend Intern & UI/UX Enthusiast</p>
-                    <p class="footer__text" data-lang-vi="© 2023 Trần Thanh Tùng. Tất cả quyền được bảo lưu."
-                        data-lang-en="© 2023 Trần Thanh Tùng. All rights reserved.">© 2023 Trần Thanh Tùng. Tất cả quyền
-                        được bảo lưu.</p>
+            <div class="feedback-inner">
+                <div class="feedback-mascot reveal-left">
+                    <img src="public/images/mascot-welcom.png" alt="Feedback welcome mascot" loading="lazy" />
                 </div>
+                <div class="feedback-form-area reveal-right">
+                    <h2 id="feedbackTitle" class="section-title" data-lang-vi="Góp ý cho tôi!"
+                        data-lang-en="Give me feedback!">Góp ý cho tôi!</h2>
+                    <p data-lang-vi="Portfolio này có ổn không? Hãy cho tôi biết suy nghĩ của bạn."
+                        data-lang-en="How is this portfolio? Let me know your thoughts.">Portfolio này có ổn không? Hãy
+                        cho tôi biết suy nghĩ của bạn.</p>
+
+                    <!-- Step 1 -->
+                    <div class="fb-step active" id="fbStep1">
+                        <p class="fb-step-label" data-lang-vi="Đánh giá tổng thể:" data-lang-en="Overall rating:">Đánh
+                            giá tổng thể:</p>
+                        <div class="fb-stars">
+                            <button class="fb-star" data-rating="1" aria-label="1 star"><i
+                                    class="far fa-star"></i></button>
+                            <button class="fb-star" data-rating="2" aria-label="2 stars"><i
+                                    class="far fa-star"></i></button>
+                            <button class="fb-star" data-rating="3" aria-label="3 stars"><i
+                                    class="far fa-star"></i></button>
+                            <button class="fb-star" data-rating="4" aria-label="4 stars"><i
+                                    class="far fa-star"></i></button>
+                            <button class="fb-star" data-rating="5" aria-label="5 stars"><i
+                                    class="far fa-star"></i></button>
+                        </div>
+                        <input type="hidden" id="fbRating" value="0" />
+                        <button class="btn-primary" id="fbNext" disabled data-lang-vi="Tiếp theo →"
+                            data-lang-en="Next →">Tiếp theo →</button>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="fb-step" id="fbStep2">
+                        <textarea id="fbComment" rows="4" placeholder="Chia sẻ suy nghĩ của bạn..."
+                            data-placeholder-vi="Chia sẻ suy nghĩ của bạn..."
+                            data-placeholder-en="Share your thoughts..." aria-label="Feedback comment"></textarea>
+                        <div class="fb-actions">
+                            <button class="btn-outline fb-skip" id="fbSkip" data-lang-vi="Bỏ qua" data-lang-en="Skip">Bỏ
+                                qua</button>
+                            <button class="btn-primary" id="fbSubmit">
+                                <span class="fb-submit-text" data-lang-vi="Gửi góp ý" data-lang-en="Send Feedback">Gửi
+                                    góp ý</span>
+                                <span class="fb-loader" style="display:none;"><i
+                                        class="fal fa-circle-notch fa-spin"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="fb-step" id="fbStep3">
+                        <div class="fb-success">
+                            <div class="fb-success__icon"><i class="fal fa-check"></i></div>
+                            <h3 data-lang-vi="Cảm ơn bạn!" data-lang-en="Thank you!">Cảm ơn bạn!</h3>
+                            <p data-lang-vi="Góp ý của bạn giúp mình hoàn thiện hơn!"
+                                data-lang-en="Your feedback helps me improve!">Góp ý của bạn giúp mình hoàn thiện hơn!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="public/images/mascot-pirates1.png" alt="Logo" loading="lazy" class="footer__logo" />
+                    <p data-lang-vi="© 2025 Trần Thanh Tùng. All rights reserved."
+                        data-lang-en="© 2025 Tran Thanh Tung. All rights reserved.">© 2025 Trần Thanh Tùng. All rights
+                        reserved.</p>
+                </div>
+                <nav class="footer__nav" aria-label="Footer navigation">
+                    <a href="#home" data-lang-vi="Trang chủ" data-lang-en="Home">Trang chủ</a>
+                    <a href="#about" data-lang-vi="Giới thiệu" data-lang-en="About">Giới thiệu</a>
+                    <a href="#projects" data-lang-vi="Dự án" data-lang-en="Projects">Dự án</a>
+                    <a href="#contact" data-lang-vi="Liên hệ" data-lang-en="Contact">Liên hệ</a>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- =========================================
-    BACK TO TOP BUTTON
-    ========================================= -->
-    <a href="#" class="back-to-top glass" aria-label="Back to top">
+    <!-- =================== BACK TO TOP =================== -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
-    </a>
+    </button>
 
     <script src="app.js"></script>
 </body>
