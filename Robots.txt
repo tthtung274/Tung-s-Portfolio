@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /fontawesome-pro-5/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+Sitemap: https://tranthanhtungreal.id.vn/sitemap.xml

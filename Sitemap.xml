@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://tranthanhtungreal.id.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tranthanhtungreal.id.vn/"/>
+    <image:image>
+      <image:loc>https://tranthanhtungreal.id.vn/images/preview.png</image:loc>
+      <image:title>Trần Thanh Tùng - AI Engineer & Frontend Developer Hà Nội</image:title>
+      <image:caption>Portfolio của Trần Thanh Tùng, AI Engineer và Frontend Developer tại Hà Nội, Việt Nam</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/#about</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/#journey</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/#skills</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/#projects</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tranthanhtungreal.id.vn/#contact</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
